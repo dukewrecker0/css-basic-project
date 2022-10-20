@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Responsive CSS3 Pricng Tables</title>
+ <style>
+
+body{
+  font-family:"Tahoma", sans-serif;
+  background:#333;
+  color:#fff;
+}
+
+h2{
+  text-align:center;
+}
+
+.col{
+  float:left;
+  width:33.3%;
+  padding:8px;
+  box-sizing:border-box;
+}
+
+.price-box{
+  background:#fff;
+  color:#555;
+  list-style-type:none;
+  border:1px solid #555;
+  margin:0;
+  padding:0;
+  transition:0.3s;
+}
+
+.price-box:hover, .price-box.best{
+  box-shadow: 0 10px 15px 0 #000;
+}
+
+.price-box .header{
+  background-color:#111;
+  color:#fff;
+  font-size:25px;
+}
+
+.price-box .header.header-green{
+  background-color:#4CAf50;
+}
+
+.price-box li{
+  padding:20px;
+  border-bottom:1px solid #eee;
+  text-align:center;
+}
+
+.price-box .dark{
+  background-color:#f4f4f4;
+  font-size:20px;
+}
+
+.button{
+  background-color:#4CAf50;
+  border:none;
+  color:#fff;
+  padding: 10px 15px;
+  text-align:center;
+  text-decoration:none;
+  font-size:18px;
+}
+
+@media(max-width:700px){
+  .col{
+    width:100%;
+  }
+}
+
+ </style>
+</head>
+<body>
+  <h2>Pricing Tables</h2>
+  <div class="col">
+    <ul class="price-box">
+      <li class="header">Simple</li>
+      <li class="dark"><strong>$ 5.99</strong> / Month</li>
+      <li><strong>20GB</strong> Disk Space</li>
+      <li><strong>10GB</strong> Data Transfer</li>
+      <li><strong>2</strong> Domains</li>
+      <li><strong>50</strong> Email Accounts</li>
+      <li><strong>2</strong> FTP Accounts</li>
+      <li class="dark"><a href="#" class="button">Buy Now</a></li>
+    </ul>
+  </div>
+
+  <div class="col">
+    <ul class="price-box best">
+      <li class="header header-green">Standard</li>
+      <li class="dark"><strong>$ 15.99</strong> / Month</li>
+      <li><strong>75GB</strong> Disk Space</li>
+      <li><strong>50GB</strong> Data Transfer</li>
+      <li><strong>10</strong> Domains</li>
+      <li><strong>100</strong> Email Accounts</li>
+      <li><strong>Unlimited</strong> FTP Accounts</li>
+      <li class="dark"><a href="#" class="button">Buy Now</a></li>
+    </ul>
+  </div>
+
+  <div class="col">
+    <ul class="price-box">
+      <li class="header">Proffesional</li>
+      <li class="dark"><strong>$ 25.99</strong> / Month</li>
+      <li><strong>120GB</strong> Disk Space</li>
+      <li><strong>100GB</strong> Data Transfer</li>
+      <li><strong>Unlimited</strong> Domains</li>
+      <li><strong>Unlimited</strong> Email Accounts</li>
+      <li><strong>Unlimited</strong> FTP Accounts</li>
+      <li class="dark"><a href="#" class="button">Buy Now</a></li>
+    </ul>
+  </div>
+</body>
+</html>
