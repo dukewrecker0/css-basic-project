@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Follow Me</title>
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+            border:0;
+        }
+
+        body{
+            background: rgb(27, 27, 27);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        @font-face{
+            font-family:'Genericons';
+            src:url('Icons/genericons-regular-webfont.woff') format('woff'), url('Icons/genericons-regular-webfont.eot') format('truetype');
+        }
+        .container{
+            margin:50px auto;
+            width:90%;
+        }
+        header h1{
+            color: white;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        .accordion{
+            background: rgb(59, 59, 59);
+            width:100%;
+            min-width:750px;
+            display: block;
+            list-style-type: none;
+            overflow: hidden;
+            height:200px;
+            font-size: 0;
+        }
+
+        .tab{
+            display:inline-block;
+            background: rgb(83, 83, 83);
+            border-right:1px solid black ;
+            width:80px;
+            height:200px;
+            overflow:hidden;
+            position:relative;
+            margin:0;
+            transition:all 0.5s ease-in-out
+        }
+
+        .tab .content{
+            background: white;
+            width:360px;
+            height:200px;
+            margin-left:80px;
+            position: relative;
+            padding: 50px 0 0 15px;
+        }
+        .tab .content h1{
+            font-size: 2.5rem;
+            margin-bottom: 10px;}
+        .tab .content p{
+            font-size: 0.85rem;
+            line-height:1.4rem ;
+            padding-right: 30px;}
+
+        .tab:hover{
+            width:440px
+        }
+
+        /*tab animations*/
+        .social a:before,.social a:after{
+            width:80px;
+            height: 200px;
+            position: absolute;
+            text-indent: 0;
+            padding-top:90px;
+            padding-left:25px;
+            display: block;
+            font:normal 32px Genericons;
+            color: white;
+
+            transition: all 0.4s ease-in-out 0.1s;
+        }
+        .social a::after{
+            font-size: 48px;
+            padding-left: 20px;
+            padding-top: 80px;
+            margin-left:85px;
+        }
+        .tab:hover .social a::before{
+            margin-left: -100px;
+        }
+        .tab:hover .social a::after{
+            margin-left: -5px;
+        }
+        /*inserting icons*/
+        .youtube a::before, .youtube a::after{
+                content:'\f213'; }
+        .youtube a::after{background: rgb(255, 14, 14);}
+
+        .twitter a::before, .twitter a::after{
+            content:'\f202';}
+        .twitter a::after{background: rgb(7, 216, 231);}
+
+        .facebook a::before, .facebook a::after{
+            content:'\f204';}
+        .facebook a::after{background: rgb(2, 48, 255);}
+
+        .linkedin a::before, .linkedin a::after{
+            content:'\f208';}
+        .linkedin a::after{background: rgb(0, 114, 180);}
+
+        .instagram a::before, .instagram a::after{
+            content:'\f215';}
+        .instagram a::after{background: rgb(255, 30, 98);}
+            
+        .github a::before, .github a::after{
+        content:'\f200';}
+        .github a::after{background: rgb(148, 0, 171);}   
+
+            
+                
+            /*media queries*/
+        @media(max-width:950px){
+            .container{
+                width:80%;}
+            .tab{
+                display:block;
+                width:100%;
+                border-bottom:3px solid #333;}
+            .accordion{
+                display: block;
+                min-width:450px;
+                height: auto;
+            }
+            .tab .content{
+                width:85%;
+            }
+            .tab:hover{
+                width: 100%;
+            }
+        }
+
+        @media(max-width:680px){
+        .container{
+            width:95%}
+        .accordion{
+            width:100%;
+            min-width:350px;
+        }
+        }
+
+       
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Follow me on social media</h1>
+        </header>
+        <ul class="accordion">
+            <li class="tab">
+                <div class="social youtube">
+                    <a href="www.youtube.com" target="_blank">Youtube</a>
+                </div>
+                <div class="content">
+                    <h1>Youtube</h1>
+                    <p>Follow me on Youtube for latest videos</p>
+                </div>
+            </li>
+            <li class="tab">
+                <div class="social twitter">
+                    <a href="www.youtube.com" target="_blank">Twitter</a>
+                </div>
+                <div class="content">
+                    <h1>Twitter</h1>
+                    <p>Follow me on Youtube for latest videos</p>
+                </div>
+            </li>
+            <li class="tab">
+                <div class="social facebook">
+                    <a href="www.facebook.com" target="_blank">Facebook</a>
+                </div>
+                <div class="content">
+                    <h1>Facebook</h1>
+                    <p>Follow me on Youtube for latest videos</p>
+                </div>
+            </li>
+            <li class="tab">
+                <div class="social linkedin">
+                    <a href="www.youtube.com" target="_blank">Linkedin</a>
+                </div>
+                <div class="content">
+                    <h1>Linkedin</h1>
+                    <p>Follow me on Youtube for latest videos</p>
+                </div>
+            </li>
+            <li class="tab">
+                <div class="social instagram">
+                    <a href="www.youtube.com" target="_blank">Instagram</a>
+                </div>
+                <div class="content">
+                    <h1>Instagram</h1>
+                    <p>Follow me on Instagram for latest videos</p>
+                </div>
+            </li>
+            <li class="tab">
+                <div class="social github">
+                    <a href="www.github.com" target="_blank">Github</a>
+                </div>
+                <div class="content">
+                    <h1>Github</h1>
+                    <p>Follow me on Youtube for latest videos</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+    
+</body>
+</html>
